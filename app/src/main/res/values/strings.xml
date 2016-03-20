@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CheckAge</string>
+    <string name="enter_age_text">Please Enter Your Age</string>
+    <string name="button_title">Enter</string>
+</resources>
