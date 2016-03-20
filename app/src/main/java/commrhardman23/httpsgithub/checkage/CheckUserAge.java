@@ -28,7 +28,7 @@ public class CheckUserAge extends AppCompatActivity {
     public void ageChecker(View vw){
 
         int userAge = Integer.parseInt(edtxtUserAge.getText().toString());
-        String userResponse = "";
+        String userResponse;
 
         //checks whether the user is less than 18
         if(userAge < 18){
@@ -37,10 +37,13 @@ public class CheckUserAge extends AppCompatActivity {
         //checks whether the user is 18 or older
         } else {
 
-            //this will be printed regardless of whether the user is 55 or older
+            //this will be printed regardless of what age you are over 17
             userResponse = "You are legally an adult! Huzzah!";
 
-            //but if the user is 55, we want to distinguish them from other users who are adults
+            /**
+             * but if the user is 55 or older, we want to distinguish them from
+             * other users who are adults
+             */
             if (userAge >= 55) {
                 userResponse += "\nYou are even eligible for the senior's discount!";
                 userResponse += "\nP.S. Good for you using an Android phone at your age! :p";
@@ -50,8 +53,8 @@ public class CheckUserAge extends AppCompatActivity {
              * they can start saving money by using the senior's discount
              */
             } else {
-                userResponse += "\nYou are " + (55 - userAge) + " years away from the senior's" +
-                        " discount";
+                userResponse += "\nYou are " + (55 - userAge) + " years away from being eligible" +
+                        " for the senior's discount";
             }
 
         }
